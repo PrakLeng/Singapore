@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>
+      Singapore’s Economic Development: Benefits, Challenges and Strategies
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #eef2ef;
+        --panel: #ffffff;
+        --ink: #0f2a2e;
+        --muted: #4d6468;
+        --line: #cbd8d5;
+        --teal: #0e6b6b;
+        --red: #c8302a;
+        --sand: #e8dfc8;
+        --onteal: #ffffff;
+        color-scheme: light;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0b1a1d;
+          --panel: #13292d;
+          --ink: #eaf3f1;
+          --muted: #9cb5b3;
+          --line: #254146;
+          --teal: #4fc3bb;
+          --red: #ff7b70;
+          --sand: #2b3b36;
+          --onteal: #0b1a1d;
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0b1a1d;
+        --panel: #13292d;
+        --ink: #eaf3f1;
+        --muted: #9cb5b3;
+        --line: #254146;
+        --teal: #4fc3bb;
+        --red: #ff7b70;
+        --sand: #2b3b36;
+        --onteal: #0b1a1d;
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 60px);
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          400 17px/1.6 "IBM Plex Sans",
+          system-ui,
+          sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
+        margin: 0;
+        line-height: 1.08;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid var(--teal);
+        outline-offset: 2px;
+      }
+      .wrap {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .bar {
+        position: sticky;
+        top: env(safe-area-inset-top, 0px);
+        z-index: 10;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+      }
+      .bar .wrap {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        height: 54px;
+      }
+      .bar b {
+        font-family: "Bricolage Grotesque", sans-serif;
+        margin-right: auto;
+      }
+      .bar a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .bar a:hover {
+        color: var(--ink);
+      }
+      .pill {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 99px;
+        padding: 5px 12px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      @media (max-width: 640px) {
+        .bar a {
+          display: none;
+        }
+      }
+      /* The stall */
+      .awning {
+        height: 54px;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--red) 0 44px,
+          #fff 44px 88px
+        );
+        border-radius: 0 0 40px 40px/0 0 22px 22px;
+        box-shadow: 0 6px 0 var(--sand);
+      }
+      .stall {
+        background: var(--sand);
+        border: 2px solid var(--ink);
+        border-top: 0;
+        border-radius: 0 0 14px 14px;
+        padding: 38px 24px 30px;
+        margin-bottom: 0;
+      }
+      .stall h1 {
+        font-weight: 800;
+        font-size: clamp(34px, 7vw, 68px);
+        letter-spacing: -0.02em;
+        max-width: 14em;
+      }
+      .stall p.lead {
+        max-width: 36em;
+        color: var(--muted);
+        font-size: 19px;
+        margin: 14px 0 22px;
+      }
+      .sign {
+        display: inline-block;
+        background: var(--ink);
+        color: var(--bg);
+        border-radius: 6px;
+        padding: 4px 12px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        border: 0;
+        border-radius: 9px;
+        padding: 12px 20px;
+        font-weight: 600;
+        cursor: pointer;
+        background: var(--teal);
+        color: var(--onteal);
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn.alt {
+        background: transparent;
+        border: 2px solid var(--ink);
+        color: var(--ink);
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin: 26px 0 0;
+      }
+      .fact {
+        background: var(--panel);
+        border: 1.5px solid var(--ink);
+        border-radius: 10px;
+        padding: 14px 16px;
+      }
+      .fact b {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 28px;
+        display: block;
+        line-height: 1.1;
+      }
+      .fact span {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      section {
+        padding: 54px 0 10px;
+      }
+      h2 {
+        font-size: clamp(28px, 5vw, 44px);
+        margin-bottom: 8px;
+      }
+      .sub {
+        color: var(--muted);
+        display: block;
+        text-align: left !important;
+        max-width: 42em;
+        width: 100%;
+        margin: 0 auto 24px 0;
+      }
+      /* Shelf tabs */
+      .tabs {
+        display: flex;
+        align-items: stretch;
+        gap: 6px;
+        border-bottom: 3px solid var(--ink);
+        flex-wrap: nowrap;
+      }
+      .tab {
+        flex: 1 1 0;
+        min-width: 0;
+        margin: 0;
+        border: 2px solid var(--ink);
+        border-bottom: 0;
+        background: var(--panel);
+        padding: 12px 8px;
+        border-radius: 10px 10px 0 0;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.2;
+        text-align: center;
+        white-space: nowrap;
+      }
+      @media (max-width: 480px) {
+        .tab {
+          font-size: 14px;
+          padding: 12px 4px;
+        }
+      }
+      .tab[aria-selected="true"] {
+        background: var(--ink);
+        color: var(--bg);
+      }
+      .shelf {
+        background: var(--panel);
+        border: 2px solid var(--ink);
+        border-top: 0;
+        padding: 22px;
+        border-radius: 0 0 12px 12px;
+      }
+      .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+      }
+      .item {
+        border-left: 5px solid var(--teal);
+        padding: 2px 0 2px 14px;
+      }
+      .item h3 {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+      .item p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+      .shelf .takeaway {
+        margin: 20px 0 0;
+        padding-top: 14px;
+        border-top: 1px dashed var(--line);
+        font-weight: 500;
+      }
+      /* Timeline */
+      .card {
+        background: var(--panel);
+        border: 1.5px solid var(--line);
+        border-radius: 14px;
+        padding: 22px;
+      }
+      .tl {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 24px;
+        align-items: center;
+      }
+      @media (max-width: 760px) {
+        .tl {
+          grid-template-columns: 1fr;
+        }
+      }
+      input[type="range"] {
+        width: 100%;
+        accent-color: var(--teal);
+        margin: 14px 0 4px;
+      }
+      .ticks {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .yr {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-weight: 800;
+        font-size: 44px;
+        color: var(--red);
+        line-height: 1;
+      }
+      .gdp {
+        font-weight: 600;
+        margin: 6px 0 10px;
+      }
+      svg.chart {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .cap {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .skyline {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 26px;
+        border-radius: 10px;
+        border: 2px solid var(--ink);
+        background: var(--bg);
+      }
+      .gal {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+      .pic {
+        background: var(--panel);
+        border: 2px solid var(--ink);
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 0;
+      }
+      .pic svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: var(--bg);
+      }
+      .pic figcaption {
+        padding: 10px 14px 14px;
+        font-size: 15px;
+        color: var(--muted);
+      }
+      .pic b {
+        color: var(--ink);
+        display: block;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 18px;
+      }
+      /* Quiz */
+      .q h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+      .opts {
+        display: grid;
+        gap: 10px;
+      }
+      .opt {
+        text-align: left;
+        border: 2px solid var(--line);
+        background: var(--bg);
+        border-radius: 10px;
+        padding: 11px 14px;
+        cursor: pointer;
+      }
+      .opt:hover:not(:disabled) {
+        border-color: var(--teal);
+      }
+      .opt.right {
+        border-color: var(--teal);
+        background: var(--teal);
+        color: var(--onteal);
+      }
+      .opt.wrong {
+        border-color: var(--red);
+      }
+      .exp {
+        margin: 14px 0 0;
+        color: var(--muted);
+        min-height: 3em;
+      }
+      .prog {
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      /* Guestbook */
+      textarea,
+      input[type="text"] {
+        width: 100%;
+        background: var(--bg);
+        border: 1.5px solid var(--line);
+        border-radius: 10px;
+        padding: 10px 12px;
+        font: inherit;
+        color: inherit;
+      }
+      label {
+        font-weight: 600;
+        font-size: 15px;
+        display: grid;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+      .notes {
+        display: grid;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .note {
+        background: var(--sand);
+        border: 1.5px solid var(--ink);
+        border-radius: 6px;
+        padding: 10px 14px;
+        transform: rotate(-0.4deg);
+      }
+      .note small {
+        color: var(--muted);
+      }
+      .err {
+        color: var(--red);
+        font-size: 14px;
+        min-height: 1.2em;
+      }
+      ol.refs {
+        padding-left: 20px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+      footer {
+        padding: 34px 0 40px;
+        margin-top: 40px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media print {
+        .bar,
+        .row,
+        .pill,
+        form {
+          display: none !important;
+        }
+        body {
+          background: #fff;
+          color: #000;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bar">
+      <div class="wrap">
+        <b>Singapore stall</b>
+        <a href="#explore">Explore</a><a href="#gallery">Pictures</a
+        ><a href="#timeline">Timeline</a><a href="#quiz">Quiz</a
+        ><a href="#visitors">Visitors</a><a href="#sources">Sources</a>
+        <button
+          class="pill"
+          id="theme"
+          aria-label="Switch between light and dark theme"
+        >
+          Theme
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <div class="awning" aria-hidden="true"></div>
+        <div class="stall">
+          <span class="sign">Research stall. Presented by Bunleng</span>
+          <h1>
+            Singapore’s Economic Development: Benefits, Challenges and
+            Strategies
+          </h1>
+          <p class="lead">
+            How a small island with no natural resources became one of the
+            world’s richest economies, what that growth costs, and what the
+            country is doing to stay ahead.
+          </p>
+          <div class="row">
+            <a class="btn" href="#explore">Walk the stall</a
+            ><button class="btn alt" onclick="window.print()">
+              Print as poster
+            </button>
+          </div>
+          <svg
+            class="skyline"
+            viewBox="0 0 800 220"
+            role="img"
+            aria-label="Illustration of the Singapore skyline at Marina Bay with a three-tower hotel, supertrees and a container ship"
+          >
+            <circle cx="660" cy="62" r="30" fill="var(--red)" />
+            <g fill="var(--ink)" opacity=".85">
+              <rect x="40" y="110" width="36" height="70" />
+              <rect x="82" y="80" width="30" height="100" />
+              <rect x="118" y="120" width="40" height="60" />
+              <rect x="168" y="60" width="34" height="120" />
+              <rect x="208" y="100" width="44" height="80" />
+            </g>
+            <g fill="var(--teal)">
+              <rect x="300" y="72" width="26" height="108" />
+              <rect x="342" y="72" width="26" height="108" />
+              <rect x="384" y="72" width="26" height="108" />
+              <path d="M270 66 L440 58 L440 70 L270 74 Z" fill="var(--red)" />
+            </g>
+            <g fill="var(--ink)" opacity=".85">
+              <rect x="460" y="90" width="38" height="90" />
+              <rect x="504" y="50" width="30" height="130" />
+            </g>
+            <g stroke="var(--teal)" stroke-width="6" fill="none">
+              <path d="M580 180 L584 110" />
+              <path d="M620 180 L616 96" />
+              <path d="M660 180 L664 118" />
+            </g>
+            <g fill="var(--teal)">
+              <ellipse cx="584" cy="106" rx="26" ry="10" />
+              <ellipse cx="616" cy="92" rx="30" ry="11" />
+              <ellipse cx="664" cy="114" rx="24" ry="9" />
+            </g>
+            <rect
+              x="0"
+              y="180"
+              width="800"
+              height="40"
+              fill="var(--teal)"
+              opacity=".3"
+            />
+            <path
+              d="M20 200 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"
+              stroke="var(--teal)"
+              stroke-width="2"
+              fill="none"
+            />
+            <path d="M560 196 l130 0 l-14 14 l-102 0 Z" fill="var(--ink)" />
+            <rect x="580" y="184" width="22" height="12" fill="var(--red)" />
+            <rect x="604" y="184" width="22" height="12" fill="var(--sand)" />
+            <rect x="628" y="184" width="22" height="12" fill="var(--teal)" />
+          </svg>
+          <div class="facts">
+            <div class="fact">
+              <b>1965</b
+              ><span>Independence, with no hinterland and few resources</span>
+            </div>
+            <div class="fact">
+              <b>About US$500 to about US$99,000</b
+              ><span>GDP per person, 1965 to 2025 (rounded)</span>
+            </div>
+            <div class="fact">
+              <b>About 735 km²</b
+              ><span>Land area, so space is a constant limit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="explore">
+        <div class="wrap">
+          <h2>Explore the shelves</h2>
+          <p class="sub">
+            Three shelves, one for each part of the research question. Select a
+            tab.
+          </p>
+          <div class="tabs" role="tablist" aria-label="Research shelves">
+            <button
+              class="tab"
+              role="tab"
+              id="t0"
+              aria-controls="shelf"
+              aria-selected="true"
+            >
+              Benefits
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="t1"
+              aria-controls="shelf"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Challenges
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="t2"
+              aria-controls="shelf"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Strategies
+            </button>
+          </div>
+          <div
+            class="shelf"
+            id="shelf"
+            role="tabpanel"
+            aria-labelledby="t0"
+          ></div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <div class="wrap">
+          <h2>Singapore in pictures</h2>
+          <p class="sub">
+            Four scenes that stand for the research: trade, housing, water and
+            the green and digital future.
+          </p>
+          <div class="gal">
+            <figure class="pic">
+              <svg
+                viewBox="0 0 240 150"
+                role="img"
+                aria-label="Illustration of a container ship and port crane"
+              >
+                <rect
+                  y="100"
+                  width="240"
+                  height="50"
+                  fill="var(--teal)"
+                  opacity=".3"
+                />
+                <path
+                  d="M30 100 L200 100 L186 120 L44 120 Z"
+                  fill="var(--ink)"
+                />
+                <rect x="52" y="82" width="30" height="18" fill="var(--red)" />
+                <rect x="84" y="82" width="30" height="18" fill="var(--teal)" />
+                <rect
+                  x="116"
+                  y="82"
+                  width="30"
+                  height="18"
+                  fill="var(--sand)"
+                  stroke="var(--ink)"
+                />
+                <rect x="68" y="64" width="30" height="18" fill="var(--teal)" />
+                <rect x="100" y="64" width="30" height="18" fill="var(--red)" />
+                <rect
+                  x="152"
+                  y="72"
+                  width="22"
+                  height="28"
+                  fill="var(--sand)"
+                  stroke="var(--ink)"
+                />
+                <path
+                  d="M205 100 V30 H150 M205 30 L225 30 M205 100 H225"
+                  stroke="var(--ink)"
+                  stroke-width="5"
+                  fill="none"
+                />
+              </svg>
+              <figcaption>
+                <b>Trade and port</b>Open trade and a deep-water hub link
+                Singapore to the world.
+              </figcaption>
+            </figure>
+            <figure class="pic">
+              <svg
+                viewBox="0 0 240 150"
+                role="img"
+                aria-label="Illustration of public housing blocks"
+              >
+                <defs>
+                  <pattern
+                    id="w"
+                    width="12"
+                    height="12"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <rect x="3" y="3" width="6" height="6" fill="var(--bg)" />
+                  </pattern>
+                </defs>
+                <rect
+                  x="20"
+                  y="40"
+                  width="60"
+                  height="100"
+                  fill="var(--teal)"
+                />
+                <rect x="20" y="40" width="60" height="100" fill="url(#w)" />
+                <rect x="90" y="20" width="60" height="120" fill="var(--ink)" />
+                <rect x="90" y="20" width="60" height="120" fill="url(#w)" />
+                <rect x="160" y="60" width="60" height="80" fill="var(--red)" />
+                <rect x="160" y="60" width="60" height="80" fill="url(#w)" />
+                <rect y="140" width="240" height="10" fill="var(--sand)" />
+              </svg>
+              <figcaption>
+                <b>Public housing</b>HDB flats and CPF savings made most
+                residents homeowners.
+              </figcaption>
+            </figure>
+            <figure class="pic">
+              <svg
+                viewBox="0 0 240 150"
+                role="img"
+                aria-label="Illustration of a water drop with rings"
+              >
+                <path
+                  d="M120 18 C120 18 82 70 82 96 a38 38 0 0 0 76 0 C158 70 120 18 120 18 Z"
+                  fill="var(--teal)"
+                />
+                <path
+                  d="M104 98 a16 16 0 0 0 16 16"
+                  stroke="var(--bg)"
+                  stroke-width="5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <ellipse
+                  cx="120"
+                  cy="138"
+                  rx="60"
+                  ry="8"
+                  fill="none"
+                  stroke="var(--teal)"
+                  stroke-width="3"
+                />
+                <ellipse
+                  cx="120"
+                  cy="138"
+                  rx="90"
+                  ry="10"
+                  fill="none"
+                  stroke="var(--teal)"
+                  stroke-width="2"
+                  opacity=".5"
+                />
+              </svg>
+              <figcaption>
+                <b>Water security</b>Four national taps: imports, catchment,
+                NEWater and desalination.
+              </figcaption>
+            </figure>
+            <figure class="pic">
+              <svg
+                viewBox="0 0 240 150"
+                role="img"
+                aria-label="Illustration of a tree beside circuit lines for a green and digital future"
+              >
+                <g stroke="var(--teal)" stroke-width="3" fill="none">
+                  <path d="M10 40 H60 V80 H100" />
+                  <path d="M10 100 H50 V120 H90" />
+                  <path d="M30 20 V60" />
+                </g>
+                <g fill="var(--red)">
+                  <circle cx="10" cy="40" r="5" />
+                  <circle cx="100" cy="80" r="5" />
+                  <circle cx="10" cy="100" r="5" />
+                  <circle cx="90" cy="120" r="5" />
+                  <circle cx="30" cy="20" r="5" />
+                </g>
+                <rect x="166" y="80" width="12" height="60" fill="var(--ink)" />
+                <circle cx="172" cy="58" r="38" fill="var(--teal)" />
+                <circle
+                  cx="150"
+                  cy="72"
+                  r="22"
+                  fill="var(--teal)"
+                  opacity=".8"
+                />
+                <circle
+                  cx="196"
+                  cy="70"
+                  r="20"
+                  fill="var(--teal)"
+                  opacity=".8"
+                />
+              </svg>
+              <figcaption>
+                <b>Smart and green</b>Smart Nation and the Green Plan 2030 aim
+                for growth that lasts.
+              </figcaption>
+            </figure>
+          </div>
+          <p class="cap">
+            These are drawn illustrations. Send me your own photos and I can
+            place them in this gallery.
+          </p>
+        </div>
+      </section>
+
+      <section id="timeline">
+        <div class="wrap">
+          <h2>Growth timeline</h2>
+          <p class="sub">
+            Move the slider to see how policy shifted as income rose. GDP per
+            person is rounded and approximate, in current US dollars.
+          </p>
+          <div class="card tl">
+            <div>
+              <div class="yr" id="yr">1965</div>
+              <div class="gdp" id="gdp"></div>
+              <h3 id="phase" style="font-size: 22px; margin-bottom: 6px"></h3>
+              <p id="phasetxt" style="margin: 0; color: var(--muted)"></p>
+              <input
+                type="range"
+                id="slide"
+                min="0"
+                max="7"
+                step="1"
+                value="0"
+                aria-label="Choose a year"
+                aria-valuetext="1965"
+              />
+              <div class="ticks">
+                <span>1965</span><span>1980</span><span>1990</span
+                ><span>2000</span><span>2010</span><span>2020</span
+                ><span>2024</span><span>2025</span>
+              </div>
+            </div>
+            <div>
+              <svg
+                class="chart"
+                id="chart"
+                viewBox="0 0 320 210"
+                role="img"
+                aria-label="Line chart of Singapore GDP per person rising from about 500 dollars in 1965 to about 99,000 in 2025"
+              ></svg>
+              <div class="cap">
+                Source basis: World Bank series (2024 and 2025 as published in
+                2026), rounded. Later revisions are possible.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz">
+        <div class="wrap">
+          <h2>Visitor challenge</h2>
+          <p class="sub">
+            Five questions drawn from the research. See how many you get right.
+          </p>
+          <div class="card q" id="quizbox"></div>
+        </div>
+      </section>
+
+      <section id="visitors">
+        <div class="wrap">
+          <h2>Visitor notebook</h2>
+          <p class="sub">
+            Leave a question or comment for the researcher. Notes are saved only
+            in this browser.
+          </p>
+          <form id="gb" novalidate class="card" style="max-width: 600px">
+            <label
+              >Your name<input
+                type="text"
+                id="gn"
+                maxlength="40"
+                autocomplete="name"
+            /></label>
+            <label
+              >Your comment or question<textarea
+                id="gm"
+                rows="3"
+                maxlength="300"
+              ></textarea>
+            </label>
+            <div class="err" id="ge"></div>
+            <button class="btn" type="submit">Add note</button>
+          </form>
+          <div class="notes" id="notes"></div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <div class="wrap">
+          <h2>Sources and notes</h2>
+          <p class="sub">
+            Replace or extend these with the exact references from your own
+            paper before presenting.
+          </p>
+          <ol class="refs">
+            <li>
+              World Bank, World Development Indicators: GDP per capita (current
+              US$, 1965 to 2025) and trade as a share of GDP, Singapore.
+            </li>
+            <li>
+              Singapore Department of Statistics: population, labour force and
+              national accounts releases.
+            </li>
+            <li>
+              Economic Development Board and Ministry of Trade and Industry:
+              Economic Strategy Review and industry transformation reports.
+            </li>
+            <li>
+              Lee Kuan Yew,
+              <i>From Third World to First: The Singapore Story, 1965–2000</i>.
+            </li>
+            <li>
+              Ministry of Sustainability and the Environment: Singapore Green
+              Plan 2030 and water supply (the four national taps).
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        Figures are rounded and for study display. Verify each number against
+        your cited source before submission.
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        "use strict";
+        var $ = function (i) {
+          return document.getElementById(i);
+        };
+        function store(k, v) {
+          try {
+            if (v === undefined) {
+              var r = localStorage.getItem(k);
+              return r ? JSON.parse(r) : null;
+            }
+            localStorage.setItem(k, JSON.stringify(v));
+          } catch (e) {
+            return null;
+          }
+        }
+        function esc(s) {
+          return String(s).replace(/[&<>"]/g, function (c) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+          });
+        }
+
+        var sv = store("sg-theme");
+        if (sv) document.documentElement.setAttribute("data-theme", sv);
+        $("theme").onclick = function () {
+          var cur = document.documentElement.getAttribute("data-theme");
+          var dark = cur
+            ? cur === "dark"
+            : matchMedia("(prefers-color-scheme:dark)").matches;
+          var n = dark ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", n);
+          store("sg-theme", n);
+        };
+
+        /* Shelves */
+        var S = [
+          {
+            items: [
+              [
+                "High income and living standards",
+                "GDP per person rose from a few hundred dollars at independence to among the highest in the world, funding housing, schools and healthcare.",
+              ],
+              [
+                "Global trade hub",
+                "A deep-water port, a major airport and open trade policy made the country a regional centre for shipping, finance and logistics.",
+              ],
+              [
+                "Foreign investment and skilled jobs",
+                "A stable legal system and clear rules drew multinational firms, bringing technology and better-paying work.",
+              ],
+              [
+                "Public housing and savings",
+                "HDB flats and the Central Provident Fund turned most residents into homeowners and long-term savers.",
+              ],
+              [
+                "Fiscal strength",
+                "Persistent budget discipline and large reserves give room to respond to crises.",
+              ],
+            ],
+            take: "Benefit in one line: openness plus strong institutions turned a tiny market into a global one.",
+          },
+          {
+            items: [
+              [
+                "Ageing population and low births",
+                "The fertility rate is far below replacement level, so the workforce grows slowly while healthcare costs rise.",
+              ],
+              [
+                "Dependence on external demand",
+                "Trade is several times the size of GDP, so global downturns hit hard.",
+              ],
+              [
+                "Inequality and cost of living",
+                "Housing, education and daily costs are high, and the gap between top and bottom incomes is a policy concern.",
+              ],
+              [
+                "Reliance on foreign workers",
+                "A large share of the workforce is non-resident, which raises questions about wages, productivity and social balance.",
+              ],
+              [
+                "Scarce land, water and energy",
+                "Almost all water, food and energy inputs depend on imports or costly technology.",
+              ],
+              [
+                "Climate exposure",
+                "A low-lying island faces sea-level rise and heat, and its carbon-intensive industry must change.",
+              ],
+            ],
+            take: "Challenge in one line: the same openness that created wealth also creates exposure.",
+          },
+          {
+            items: [
+              [
+                "Move up the value chain",
+                "Shift from labour-intensive manufacturing to electronics, biomedical science, finance and advanced services.",
+              ],
+              [
+                "Skills for life",
+                "SkillsFuture credits and retraining keep workers employable as technology changes.",
+              ],
+              [
+                "Smart Nation and digital economy",
+                "Public investment in data, payments, AI and digital government to raise productivity.",
+              ],
+              [
+                "Diversify partners",
+                "A wide network of free trade agreements spreads risk across many markets.",
+              ],
+              [
+                "Secure resources",
+                "Recycled NEWater, desalination, reservoirs and imports form the four national taps.",
+              ],
+              [
+                "Green growth",
+                "The Singapore Green Plan 2030 targets cleaner energy, greener buildings and a low-carbon future.",
+              ],
+              [
+                "Support families and the vulnerable",
+                "Targeted grants, taxes and transfers to share gains and ease ageing costs.",
+              ],
+            ],
+            take: "Strategy in one line: keep reinventing the economy before the old model runs out.",
+          },
+        ];
+        var tabs = [$("t0"), $("t1"), $("t2")];
+        function shelf(i) {
+          tabs.forEach(function (t, j) {
+            t.setAttribute("aria-selected", j === i);
+            t.tabIndex = j === i ? 0 : -1;
+          });
+          var p = $("shelf");
+          p.setAttribute("aria-labelledby", "t" + i);
+          p.innerHTML =
+            '<div class="items">' +
+            S[i].items
+              .map(function (x) {
+                return (
+                  '<div class="item"><h3>' +
+                  x[0] +
+                  "</h3><p>" +
+                  x[1] +
+                  "</p></div>"
+                );
+              })
+              .join("") +
+            '</div><p class="takeaway">' +
+            S[i].take +
+            "</p>";
+        }
+        tabs.forEach(function (t, i) {
+          t.onclick = function () {
+            shelf(i);
+          };
+          t.onkeydown = function (e) {
+            var n =
+              e.key === "ArrowRight"
+                ? (i + 1) % 3
+                : e.key === "ArrowLeft"
+                  ? (i + 2) % 3
+                  : -1;
+            if (n >= 0) {
+              e.preventDefault();
+              shelf(n);
+              tabs[n].focus();
+            }
+          };
+        });
+        shelf(0);
+
+        /* Timeline */
+        var T = [
+          {
+            y: 1965,
+            g: 500,
+            h: "Survival",
+            t: "Separation from Malaysia on 9 August 1965. Priorities: jobs, housing and defence. The Economic Development Board (1961) and Jurong Industrial Estate began drawing factories.",
+          },
+          {
+            y: 1980,
+            g: 4900,
+            h: "Industrial take-off",
+            t: "Export manufacturing, port expansion and Singapore Airlines. Labour-intensive work gave way to higher-skill industry.",
+          },
+          {
+            y: 1990,
+            g: 12000,
+            h: "Regional hub",
+            t: "Electronics, finance and shipping grew fast. Planning focused on becoming a regional headquarters for multinationals.",
+          },
+          {
+            y: 2000,
+            g: 23800,
+            h: "Knowledge economy",
+            t: "After the Asian financial crisis, policy pushed biomedical science, services and innovation.",
+          },
+          {
+            y: 2010,
+            g: 47000,
+            h: "Rapid growth, new strains",
+            t: "Strong post-crisis rebound, but rising costs, a larger foreign workforce and housing pressure became political issues.",
+          },
+          {
+            y: 2020,
+            g: 60700,
+            h: "Pandemic shock",
+            t: "COVID-19 hit trade, tourism and aviation and the economy contracted by roughly 4 percent. Large support packages protected jobs and firms.",
+          },
+          {
+            y: 2024,
+            g: 94900,
+            h: "Strong rebound",
+            t: "Output recovered above pre-pandemic levels, helped by finance, electronics and AI-related demand. GDP per person passed US$90,000.",
+          },
+          {
+            y: 2025,
+            g: 98800,
+            h: "Smart, green and ageing",
+            t: "Growth stayed solid at about 5 percent, while Smart Nation, SkillsFuture and Green Plan 2030 aim to lift productivity as the population ages and trade tensions rise.",
+          },
+        ];
+        var W = 320,
+          H = 210,
+          L = 34,
+          B = 24,
+          Tt = 10,
+          R = 12;
+        function px(i) {
+          return L + ((W - L - R) * (T[i].y - 1965)) / (2025 - 1965);
+        }
+        function py(v) {
+          return (
+            H - B - ((H - B - Tt) * Math.log(v / 300)) / Math.log(100000 / 300)
+          );
+        }
+        function chart(k) {
+          var d = T.map(function (p, i) {
+            return (
+              (i ? "L" : "M") + px(i).toFixed(1) + " " + py(p.g).toFixed(1)
+            );
+          }).join(" ");
+          var s =
+            '<line x1="' +
+            L +
+            '" y1="' +
+            (H - B) +
+            '" x2="' +
+            (W - R) +
+            '" y2="' +
+            (H - B) +
+            '" stroke="var(--line)"/><line x1="' +
+            L +
+            '" y1="' +
+            Tt +
+            '" x2="' +
+            L +
+            '" y2="' +
+            (H - B) +
+            '" stroke="var(--line)"/>';
+          [1000, 10000, 100000].forEach(function (v) {
+            var y = py(v);
+            s +=
+              '<line x1="' +
+              L +
+              '" x2="' +
+              (W - R) +
+              '" y1="' +
+              y +
+              '" y2="' +
+              y +
+              '" stroke="var(--line)" stroke-dasharray="3 4"/><text x="' +
+              (L - 4) +
+              '" y="' +
+              (y + 4) +
+              '" font-size="10" text-anchor="end" fill="var(--muted)">' +
+              (v >= 1000 ? v / 1000 + "k" : v) +
+              "</text>";
+          });
+          s +=
+            '<path d="' +
+            d +
+            '" fill="none" stroke="var(--teal)" stroke-width="3"/>';
+          T.forEach(function (p, i) {
+            s +=
+              '<circle cx="' +
+              px(i) +
+              '" cy="' +
+              py(p.g) +
+              '" r="' +
+              (i === k ? 7 : 3.5) +
+              '" fill="' +
+              (i === k ? "var(--red)" : "var(--teal)") +
+              '"/>';
+          });
+          s +=
+            '<text x="' +
+            (L + 2) +
+            '" y="' +
+            (H - 6) +
+            '" font-size="10" fill="var(--muted)">1965</text><text x="' +
+            (W - R) +
+            '" y="' +
+            (H - 6) +
+            '" font-size="10" text-anchor="end" fill="var(--muted)">2025 (log scale)</text>';
+          $("chart").innerHTML = s;
+        }
+        function show(k) {
+          var p = T[k];
+          $("yr").textContent = p.y;
+          $("gdp").textContent =
+            "GDP per person: about US$" + p.g.toLocaleString();
+          $("phase").textContent = p.h;
+          $("phasetxt").textContent = p.t;
+          $("slide").setAttribute("aria-valuetext", p.y + ", " + p.h);
+          chart(k);
+        }
+        $("slide").oninput = function () {
+          show(+this.value);
+        };
+        show(0);
+
+        /* Quiz */
+        var Q = [
+          {
+            q: "In which year did Singapore become an independent country?",
+            o: ["1959", "1963", "1965", "1971"],
+            a: 2,
+            e: "Singapore separated from Malaysia on 9 August 1965.",
+          },
+          {
+            q: "Which agency was set up in 1961 to attract investment and industry?",
+            o: [
+              "Economic Development Board",
+              "Housing and Development Board",
+              "Monetary Authority",
+              "Land Transport Authority",
+            ],
+            a: 0,
+            e: "The EDB led the push for industrial estates and foreign investors.",
+          },
+          {
+            q: "Which pair best describes the biggest long-term population challenge?",
+            o: [
+              "Rapid youth growth and low density",
+              "Ageing and low birth rates",
+              "Falling life expectancy",
+              "Mass emigration",
+            ],
+            a: 1,
+            e: "Low fertility and longer lives mean a shrinking share of working-age residents.",
+          },
+          {
+            q: "What do the “four national taps” refer to?",
+            o: [
+              "Four ports",
+              "Four central banks",
+              "Four water sources",
+              "Four trade treaties",
+            ],
+            a: 2,
+            e: "Imported water, local catchment, NEWater and desalinated water.",
+          },
+          {
+            q: "Which programme helps workers pay for retraining throughout their careers?",
+            o: ["SkillsFuture", "CPF Life", "Baby Bonus", "MediSave"],
+            a: 0,
+            e: "SkillsFuture, launched in 2015, gives credits and courses for lifelong learning.",
+          },
+        ];
+        var qi = 0,
+          score = 0;
+        function ask() {
+          var b = $("quizbox");
+          if (qi >= Q.length) {
+            var m =
+              score === 5
+                ? "Perfect. You could run this stall."
+                : score >= 3
+                  ? "Good result. Read the Challenges shelf again for the rest."
+                  : "Walk the shelves once more and try again.";
+            b.innerHTML =
+              "<h3>You scored " +
+              score +
+              " out of " +
+              Q.length +
+              '</h3><p style="color:var(--muted)">' +
+              m +
+              '</p><button class="btn" id="re">Try again</button>';
+            var best = store("sg-best") || 0;
+            if (score > best) {
+              store("sg-best", score);
+              best = score;
+            }
+            b.insertAdjacentHTML(
+              "beforeend",
+              '<p class="cap">Best score in this browser: ' + best + "/5</p>",
+            );
+            $("re").onclick = function () {
+              qi = 0;
+              score = 0;
+              ask();
+            };
+            return;
+          }
+          var q = Q[qi];
+          b.innerHTML =
+            '<div class="prog">Question ' +
+            (qi + 1) +
+            " of " +
+            Q.length +
+            "</div><h3>" +
+            q.q +
+            '</h3><div class="opts">' +
+            q.o
+              .map(function (t, i) {
+                return (
+                  '<button class="opt" data-i="' + i + '">' + t + "</button>"
+                );
+              })
+              .join("") +
+            '</div><p class="exp" id="exp" aria-live="polite"></p><button class="btn" id="nx" hidden>' +
+            (qi === Q.length - 1 ? "See score" : "Next question") +
+            "</button>";
+          b.querySelectorAll(".opt").forEach(function (o) {
+            o.onclick = function () {
+              var i = +o.getAttribute("data-i");
+              b.querySelectorAll(".opt").forEach(function (x) {
+                x.disabled = true;
+              });
+              if (i === q.a) {
+                score++;
+                o.classList.add("right");
+                $("exp").textContent = "Correct. " + q.e;
+              } else {
+                o.classList.add("wrong");
+                b.querySelectorAll(".opt")[q.a].classList.add("right");
+                $("exp").textContent = "Not quite. " + q.e;
+              }
+              $("nx").hidden = false;
+              $("nx").focus();
+            };
+          });
+          $("nx") &&
+            ($("nx").onclick = function () {
+              qi++;
+              ask();
+            });
+        }
+        ask();
+
+        /* Notebook */
+        var notes = store("sg-notes") || [];
+        function drawNotes() {
+          $("notes").innerHTML = notes.length
+            ? notes
+                .slice()
+                .reverse()
+                .map(function (n) {
+                  return (
+                    '<div class="note"><b>' +
+                    esc(n.n) +
+                    "</b><br>" +
+                    esc(n.m) +
+                    "<br><small>" +
+                    esc(n.d) +
+                    "</small></div>"
+                  );
+                })
+                .join("")
+            : '<p class="cap">No notes yet. Be the first visitor to leave one.</p>';
+        }
+        $("gb").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var n = $("gn").value.trim(),
+            m = $("gm").value.trim();
+          if (!n) {
+            $("ge").textContent = "Enter your name.";
+            return;
+          }
+          if (m.length < 3) {
+            $("ge").textContent =
+              "Write a comment of at least a few characters.";
+            return;
+          }
+          $("ge").textContent = "";
+          notes.push({
+            n: n,
+            m: m,
+            d: new Date().toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "short",
+              year: "numeric",
+            }),
+          });
+          store("sg-notes", notes);
+          $("gm").value = "";
+          drawNotes();
+        });
+        drawNotes();
+      })();
+    </script>
+  </body>
+</html>
